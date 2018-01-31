@@ -1,3 +1,15 @@
+/*
+ * LonelyTwitter Activity
+ *
+ * Version 1.0
+ *
+ * January 30, 2018
+ *
+ * Copyright (c) 2018 Team X CMPUT 301. University of Alberta - All Rights Reserved. You may use distribute or modify this code under terms and condition of the Code of Student Behaviour at University of Alberta.
+ *
+ * You can find a copy of licence in this project. Otherwise please contact contact @abc.ca.
+ */
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
@@ -26,6 +38,15 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Represents a LonelyTwitterActivity
+ *
+ * @author Unknown
+ * @version 1.5
+ * @see Tweet
+ * @see NormalTweet
+ * @see ImportantTweet
+ */
 public class LonelyTwitterActivity extends Activity {
 
 	private static final String FILENAME = "tweets.sav";
@@ -34,8 +55,11 @@ public class LonelyTwitterActivity extends Activity {
 
 	private ArrayList<Tweet> tweetList;
 	private ArrayAdapter<Tweet> adapter;
-	
-	/** Called when the activity is first created. */
+
+	/**Called when the activity is first created.
+	 *
+	 * @param savedInstanceState onCreate savedInstanceState
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -73,6 +97,9 @@ public class LonelyTwitterActivity extends Activity {
 		});
 	}
 
+	/**
+	 * Called when app first loaded
+	 */
 	@Override
 	protected void onStart() {
 
@@ -88,6 +115,9 @@ public class LonelyTwitterActivity extends Activity {
 
 	}
 
+	/**
+	 * Called when app calls for old tweet.
+	 */
 	private void loadFromFile() {
 
 		try {
@@ -108,7 +138,11 @@ public class LonelyTwitterActivity extends Activity {
 		}
 
 	}
-	
+
+	/**
+	 * Called when save button clicked.
+	 * Saves tweet into lists.
+	 */
 	private void saveInFile() {
 		try {
 
@@ -129,6 +163,9 @@ public class LonelyTwitterActivity extends Activity {
 		}
 	}
 
+	/**
+	 * Destroys something
+	 */
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
