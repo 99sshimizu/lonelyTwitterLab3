@@ -1,4 +1,5 @@
-/*LonelyTwitter Activity
+/*
+ * LonelyTwitter Activity
  *
  * Version 1.0
  *
