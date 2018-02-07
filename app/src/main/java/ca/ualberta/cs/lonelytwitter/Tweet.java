@@ -65,7 +65,7 @@ public abstract class Tweet implements Tweetable {
      */
 
     public void setMessage(String message) throws TweetTooLongException{
-        if (message.length() < 140){
+        if (message.length() < 5){
             this.message = message;
         }
         else{
